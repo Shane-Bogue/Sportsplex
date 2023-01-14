@@ -1,0 +1,1008 @@
+/* https://skateboard.webflow.io/ */
+
+/* https://unsplash.com/photos/MTwzYSHnoXE?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink */
+
+@font-face {
+    font-family: 'Fox';
+    src: url('Fonts/FoxAndBower.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Sonora';
+    src: url('Fonts/Sonorous-Rough.otf') format('opentype');
+}
+
+:root {
+ --red : #df312c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sonora', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Format */
+    position: relative;
+    width: 100%;
+
+    /* Style */
+    color: #333;
+
+}
+
+header {
+    /* Format */
+    position: sticky;
+    top: 0;
+
+    width: inherit;
+    height: 120px;
+
+    /* Style */
+    background-color: #fff;
+    box-shadow: 0 4px 20px 0 rgb(0 0 0 / 20%);
+    z-index: 100;
+}
+
+header .Wrapper {
+    max-width: 1200px;
+    height: inherit;
+
+    padding-inline: 2rem;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-inline: auto;
+
+}
+
+header .Hero {
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Fox', sans-serif;
+    flex-direction: Column;
+    align-items: center;
+    
+}
+
+header .Hero:hover {
+    color: #df312c;
+    cursor: pointer;
+    transition: .25s;
+}
+
+header span {
+    font-size: 14px;
+}
+
+
+article {
+    /* Format */
+    width: inherit;
+    /* Style */
+}
+
+footer {
+    /* Format */
+    position: relative;
+
+    width: inherit;
+    height: fit-content;
+
+    height: fit-content;
+    padding-inline: 2rem;
+    padding-block-start: 3vh;
+    padding-block-end: 5.5vh;
+
+    /* Style */
+    background-color: #0f0f0f;
+}
+
+footer > * {
+    background-color: #0f0f0f !important;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    object-fit: cover;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    display: flex;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-inline: auto;
+    text-decoration: none;
+}
+
+button span{
+    text-decoration: underline;
+}
+
+button p {
+    margin-inline-start: .5vw;
+    
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: .9;
+}
+
+button:hover p{
+    margin-inline-start: .25vw;
+    color: #df312c;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.💪 {  /* Flex */
+    display: flex;
+}
+
+.⚪ {  /* Logo */
+    /* Format*/
+
+    /* Style*/
+}
+
+.🧭 { /* Navigation */
+    /* Format*/
+    width: fit-content;
+    height: inherit;
+    flex-direction: row;
+    place-items: center;
+    /* Style*/
+    list-style: none;
+}
+
+.📍 {  /*  */
+    /* Format*/
+    width: fit-content;
+    padding: 1rem;
+    margin: .5rem;
+    border-radius: .5rem;
+
+    /* Style*/
+    background-color: #333;
+    color: white;
+    font-family: 'Fox', sans-serif;
+    transition: .25s;
+}
+
+.📍:nth-child(5){
+    /* Format*/
+    display: none;
+    background-color: white;
+}
+
+.📍:nth-child(5) *{
+    /* Format*/
+    width: 34px;
+    height: 34px;
+    position: relative;
+    object-fit:contain;
+
+}
+
+ul:hover .📍:not(:hover) { /* Cards Grow When Footer Hovered  */
+    transform: scale(1.05);
+}
+
+ul:has(.📍:hover) .📍:not(:hover){ /* Cards Grow When Footer Hovered  */
+    transform: scale(1);
+}
+
+.📍:hover { /* Cards Grow When Hovered  */
+    opacity: .9;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.📌 { /*  */
+    /* Format*/
+
+    /* Style*/
+}
+
+.🔻 {  /*  */
+    /* Format*/
+
+    /* Style*/
+}
+
+.🔳 {  /*  */
+    /* Format*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* Style*/
+    background-image: linear-gradient(90deg,rgba(0,0,0,.9),rgba(100, 100, 100, 0.2));
+    z-index: 2;
+}
+
+.⬜ { /* Card  */
+    /* Format*/
+    position: relative;
+    max-width: 1200px;
+    height: fit-content;
+    padding-inline: 2rem;
+    padding-block-start: 3rem;
+    padding-block-end: 6rem;
+    margin-inline: auto;
+
+    /* Style*/
+    background-color: white;
+}
+
+.⬜ .Column {
+    /* Format*/
+    position: relative;
+    height: 400px;
+}
+
+.⬜ .Column div {
+    /* Format*/
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    padding-inline: 4rem;
+    padding-block: 3.5rem;
+
+    /* Style*/
+    color: white;
+    z-index: 3;
+    user-select: none;
+}
+
+.⬜ .Column div .Hero {
+    /* Format*/
+
+    /* Style*/
+    font-size: 3.8rem;
+    font-weight: 1000;
+    line-height: 4.5rem;
+    margin-block-end: 2vh;
+    font-family: 'Fox', sans-serif;
+}
+
+.⬜ .Column div button {
+    /* Format*/
+    padding: 1rem;
+    font-family: 'Fox', sans-serif;
+}
+
+.⬜ aside {
+    /* Format*/
+    position: relative;
+    height: 400px;
+}
+
+.⬜ aside div {
+    /* Format*/
+    width: 100%;
+    height: 100%;
+
+    padding-inline: 1rem;
+
+    /* Style*/
+    color: #333;
+    z-index: 3;
+    user-select: none;
+}
+
+.⬜ aside .Hero{
+    /* Format*/
+    width: fit-content;
+    height: 100%;
+
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+
+    /* Style*/
+    padding-block: .5rem;
+    padding-inline: 2rem;
+    font-size: 2rem;
+    background-color: #333;
+    color: white;
+    border-radius: .5rem;
+    font-family: 'Fox', sans-serif;
+}
+
+.⬜ aside .Wrapper{
+    /* Format*/
+    flex-direction: row;
+}
+
+.Head aside .Events{
+    /* Format*/
+    flex-direction: Column;
+    line-height: 2rem;
+    overflow-x: clip;
+    overflow-y: auto;
+}
+
+.Head aside .Event{
+    /* Format*/
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+
+    /* Style*/
+    font-size: 20px;
+    color: #333;
+    border-bottom: #333 1px solid;
+    padding-block: 1.5rem;
+}
+
+.Head aside .Event .Arrow {
+    /* Style*/
+    transform: translate(100%, 0%);
+    opacity: 0;
+    font-size: 4rem;
+    color: #df312c;
+}
+
+.Head aside .Event button{
+    /* Format*/
+    width: 100%;
+    height: fit-content;
+    padding-inline-start: 1rem;
+
+    /* Style*/
+    font-size: 14px;
+    color: rgba(50, 50, 50, 0.5);
+    text-decoration: none;
+}
+
+.Head aside .Event :is(p, button, .Arrow){
+    transition: .25s;
+}
+
+.Head aside .Event button span{
+    /* Style*/
+    text-decoration: none;
+}
+
+.Head aside .Event:hover {
+    cursor: pointer;
+}
+
+.Head aside .Event:hover :is(p, button,){
+    /* Style*/
+    transform: translate(2%,0%);
+    -webkit-mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
+    mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
+    opacity: 1;
+}
+
+.Head aside .Event .Arrow:hover{
+    /* Style*/
+    transform: scale(1.1);
+}
+
+
+.Grit {
+    -webkit-mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
+    mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
+}
+
+.Head {
+    display: grid;
+    grid-template-Columns: 5fr 4fr;
+}
+
+.Breaker {
+    padding: .5vh;
+    display: grid;
+    place-items: center;
+    background-color: #333;
+    color: #fff;
+    font-size: 13px;
+}
+
+.Breaker p {
+    font-family: 'Fox', sans-serif;
+}
+
+.Breaker + section {
+    background-color: #FAFAFA !important;
+}
+
+.Calendar {
+    max-width: 1200px;
+    background-color: #FAFAFA !important;
+    color: white;
+    height: fit-content;
+    display: grid;
+    grid-template-Columns: 700px 1fr;
+}
+
+.Calendar aside .Wrapper{
+    /* Format*/
+    flex-direction: Column;
+    width: 100%;
+}
+
+.Calendar aside .Day{
+    /* Format*/
+    width: 100%;
+    height: min-content;
+
+    /* Style*/
+    text-decoration: underline;
+    padding-block: .5rem;
+    padding-inline: 2rem;
+    font-size: 2rem;
+    background-color: #333;
+    color: white;
+    border-radius: .5rem;
+    text-align: center;
+    font-family: 'Fox', sans-serif;
+}
+
+.Calendar aside .Day:hover{
+    /* Style*/
+    opacity: .9;
+}
+
+.Calendar aside .Times{
+    /* Format*/
+    flex-direction: row;
+    overflow-x: auto;
+}
+
+.Calendar aside .Time{
+    /* Format*/
+    height: 90%;
+    flex-direction: Column;
+    justify-content: space-between;
+    padding: 1rem;
+    padding-inline: 2rem;
+    margin-block: 1rem;
+    margin-inline-end: 1.4rem;
+    
+    /* Style*/
+    word-spacing: 100vw;
+    border-radius: .5rem;
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+    border: #333 1px solid;
+    transition: .25s;
+    
+}
+
+.Calendar aside .Time *{
+    /* Style*/
+    flex-direction: Column;
+    align-items: center;
+    transition: .25s;
+}
+
+.Calendar aside .Time button{
+    /* Format*/
+    width: 100%;
+    height: fit-content;
+    place-self: center;
+
+    /* Style*/
+    font-size: 14px;
+    color: rgba(50, 50, 50, 0.5);
+    text-decoration: none;
+    transition: .25s;
+}
+
+.Calendar aside .Time button span{
+    /* Style*/
+    text-decoration: none;
+    transition: .25s;
+}
+
+.Calendar aside .Time:hover {
+    /* Style*/
+    cursor: pointer;
+}
+
+.Calendar aside .Time:hover{
+    /* Style*/
+    transform: scale(1.05);
+    -webkit-mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
+    mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
+    opacity: 1;
+}
+
+.Calendar aside .Time div {
+    /* Format*/
+    height: fit-content;
+    padding-inline: 1rem;
+
+    /* Style*/
+    color: #333;
+    z-index: 3;
+    user-select: none;
+}
+
+.Venue {
+    /* Style*/
+    word-spacing: 0vw;
+    font-size: 14px;
+    color: #0f0f0f;
+    
+}
+
+.Location {
+    /* Format*/
+    max-width: 1200px;
+    height: fit-content;
+    display: grid;
+    grid-template-Columns: 480px 1fr;
+    grid-template-rows: fit-content 1fr;
+    text-align: center;
+    
+    /* Style*/
+    color: #0f0f0f;
+}
+
+.Location .Hero {
+    /* Format*/
+    font-size: 2rem;
+    padding-block-end: 1rem;
+    font-family: 'Fox', sans-serif;
+}
+
+.Location div:has(.Hero) {
+    /* Format*/
+    margin-block-end: 3rem;
+    font-family: 'Fox', sans-serif;
+}
+
+.Location .Info {
+    /* Format*/
+    grid-Column: 2 / 3;
+    grid-row: 1 / 3;
+    padding-inline: 4rem;
+    flex-direction: Column;
+    justify-content: space-between;
+}
+
+.Location .Info button{
+    /* Style*/
+    color: #333;
+}
+
+.Location .Info :is(a, p:not(.Hero)){
+    /* Format*/
+    margin-block: 1vh;
+}
+
+.Location .Info p > a{
+    /* Format*/
+    text-decoration: underline;
+}
+
+.Location .Info .Hours p:not(.Hero){
+    /* Format*/
+    width: 60%;
+    height: min-content;
+    padding-block: .5rem;
+    padding-inline: 2rem;
+    margin-inline: auto;
+    text-align: center;
+
+    /* Style*/
+    font-size: 20px;
+    background-color: #333;
+    color: white;
+    border-radius: .5rem;
+}
+
+.Location .Info .Hours a{
+    /* Style*/
+    font-size: 14px;
+    color: #333;
+}
+
+.Location .Info .Hours a span{
+    /* Style*/ 
+    font-size: 14px;
+    color: rgba(50, 50, 50, 0.5);
+}
+
+.Location img {
+    /* Format*/
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+}
+
+
+.MailingList {
+    background-color: white !important;
+    height: 420px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.MailingList {
+    background-color: white !important;
+    height: 420px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.MailingList + img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-top: auto;
+    margin-left: auto;
+    width: 50vw;
+    height: 24%;
+}
+
+.MailingList label {
+    position: relative;
+    bottom: -10px;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 10px;
+    padding-right: 4px;
+    padding-left: 4px;
+    background-color: #fff;
+    font-weight: 700;
+}
+
+.MailingList .text-field {
+    height: 50px;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 100%;
+    padding-left: 1rem;
+}
+
+.MailingList aside div {
+    padding-inline: 0;
+}
+
+.MailingList .List {
+    text-align: center;
+    display: grid;
+    padding-inline-end: 3rem;
+    place-items: center;
+}
+
+.MailingList .List .Hero {
+    width: 70%;
+    height: min-content;
+    padding-block: 0.5rem;
+    padding-inline: 2rem;
+    margin-inline: auto;
+    text-align: center;
+    font-size: 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 0.5rem;
+    font-family: 'Fox', sans-serif;
+}
+
+.MailingList .List p:has(span) {
+    margin-block-start: 1vh;
+    font-size: 11px;
+    color: rgba(50, 50, 50, 0.5);
+}
+
+.MailingList .List .FormButton {
+    margin-top: 20px;
+    padding: 15px 25px;
+    border-radius: .25rem;
+    background-color: #df312c;
+    transition: .25s;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Fox', sans-serif;
+}
+
+.MailingList .List .FormButton:hover {
+    opacity: .9;
+    cursor: pointer;
+}
+
+.FooterGrid {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-row-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-block: 1vh;
+}
+
+.FooterGrid *{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+}
+
+footer > div {
+    flex-direction: column;
+    text-align: center;
+}
+
+.FooterGrid img {
+    width: 20px;
+    height: 20px;
+    display: inline;
+    position: relative;
+}
+
+.InlineBlock {
+    display: inline-flex;
+}
+
+.InlineBlock * {
+    margin-inline-end: .5vw;
+}
+
+
+@media only screen and (max-width: 1199px) {
+    .⬜ { /* Card  */
+        /* Format*/
+        grid-template-Columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    
+        /* Style*/
+        background-color: white;
+    }
+
+    .⬜ .Column div {
+        /* Format*/
+        padding-inline: 0rem;
+        /* Style*/
+        text-align: center;
+    }
+
+    .⬜ .Column div .Hero {
+        /* Style*/
+        word-spacing: 100vw;
+        word-wrap: wrap;
+    }
+
+    .⬜ .Column div button {
+        /* Format*/
+        padding: 0rem;
+    }
+
+    .⬜ aside {
+        /* Format*/
+        height: fit-content;
+    }
+
+    .⬜ aside .Hero{
+        /* Format*/
+        width: 100%;
+        height: fit-content;
+
+        text-orientation: mixed;
+        writing-mode: horizontal-tb;
+
+        /* Style*/
+        text-align: center;
+    }
+
+    .⬜ aside .Wrapper{
+        /* Format*/
+        flex-direction: Column;
+    }
+
+    .⬜ aside .Events{
+        /* Format*/
+        overflow-y: visible;
+    }
+    .Calendar{
+        /* Format*/
+        grid-template-rows: 1fr !important;
+        padding-block-end: 0rem !important;
+    }
+
+    .Calendar aside .Times{
+        /* Format*/
+        justify-content: center;
+        flex-wrap: wrap;
+        word-spacing: 0vw;
+        margin-block: 0;
+        overflow: hidden;
+        padding-block-end: 3rem;
+    }
+
+    .Calendar aside .Time {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        padding-block: 1rem;
+        margin-block: 0;
+        margin-inline-end: 0;
+        word-spacing: 0vw;
+        border-radius: 0rem;
+        text-align: center;
+        font-size: 20px;
+        color: #333;
+        border: none;
+        border-block: #333 1px solid;
+        overflow: hidden;
+        
+    }
+    .Calendar aside .Time:hover{
+        /* Style*/
+        padding-block: 1rem;
+        -webkit-mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
+        mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
+        opacity: 1;
+    }
+    .Calendar aside .Time:hover *{
+        /* Style*/
+        transform: scale(1.01);
+    }
+    
+    .Location {
+        /* Format*/
+        display: block;
+        padding-block-end: 0;
+    }
+
+    .Location .Info {
+        /* Format*/
+        padding-inline: 2vw;
+        padding-block-start: 1rem;
+    }
+
+    .Location .Info .Hours p:not(.Hero){
+        /* Format*/
+        width: 100%;
+        padding-inline: 2vw;
+    }
+
+    .MailingList + img {
+        width: 100vw;
+        height: 14%;
+    }
+    .MailingList {
+        position: relative;
+        grid-template-columns: 1fr;
+        z-index: 5;
+        margin-inline: 5rem;
+    }
+
+    footer {
+        padding-inline: 2vw;
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (max-width: 950px) {
+    .📍:nth-child(1){
+        display: none;
+    }
+    .📍:nth-child(2){
+        display: none;
+    }
+    .📍:nth-child(3){
+        display: none;
+    }
+    .📍:nth-child(4){
+        display: none;
+    }
+    .📍:nth-child(5){
+        display: block;
+        margin: 0;
+        padding: 0;
+        padding-inline: 0;
+        padding-block: 0;
+    }
+    .Calendar aside div {
+        padding-inline: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    header .Wrapper {
+        padding-inline: 6vw;
+    }
+
+    .⬜ { /* Card  */
+        /* Format*/
+        padding-inline: 0vw;
+        padding-block-start: 3rem;
+        padding-block-end: 3rem;
+    }
+
+    .⬜ .Column div .Hero {
+        /* Format*/
+    
+        /* Style*/
+        font-size: 14vw;
+        font-weight: 1000;
+        line-height: 16vw;
+        margin-block-end: 2vh;
+    }
+    
+    .⬜ aside .Hero {
+        border-radius: 0px;
+    }
+    
+    .Calendar aside .Day {
+        border-radius: 0px;
+    }
+    
+    .⬜ .Column div {
+        padding-inline: 0vw;
+    }
+    
+    .⬜ .Column div button {
+        /* Format*/
+        padding: 1vw;
+    }
+    
+    .⬜ aside div {
+        /* Format*/
+        padding-inline: 0;
+    }
+    
+    
+    .Head aside div .Event{
+        padding-inline: 1rem;
+    }
+
+    .Calendar .Column {
+        margin-block: 3rem;
+    }
+
+    .⬜ aside .Hero{
+        /* Style*/
+        padding-inline: 2vw;
+    }
+
+    .Location {
+        /* Format*/
+        display: block;
+        padding-block-start: 0rem !important;
+    }
+
+    .MailingList {
+        padding-block-end: 0;
+        margin-inline: 5vw;
+    }
+
+    .MailingList + img {
+        width: 100vw;
+        height: 14%;
+    }
+
+    .MailingList .List{
+        padding-inline: 1vw;
+    }
+}
