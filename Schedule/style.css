@@ -429,12 +429,12 @@ ul:has(.📍:hover) .📍:not(:hover){ /* Cards Grow When Footer Hovered  */
     background-color: white;
     border-radius: 2rem;
     overflow: hidden;
-    margin-block-start: 1.6rem;
+    margin-block-start: 1.8rem;
     margin-block-end: 6rem;
 }
 
 .Schedule .info{
-    background-image: url('cal.png');
+    background-image: url('../Images/cal.png');
     background-position: center;
     background-size: cover;
     position: relative;

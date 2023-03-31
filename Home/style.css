@@ -442,6 +442,8 @@ ul:has(.📍:hover) .📍:not(:hover){ /* Cards Grow When Footer Hovered  */
     /* Format*/
     flex-direction: Column;
     width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .Calendar aside .Day{
@@ -469,7 +471,9 @@ ul:has(.📍:hover) .📍:not(:hover){ /* Cards Grow When Footer Hovered  */
 .Calendar aside .Times{
     /* Format*/
     flex-direction: row;
-    overflow-x: auto;
+    overflow-x: hidden;
+    padding-inline: 0;
+    align-items: center;
 }
 
 .Calendar aside .Time{
@@ -480,7 +484,7 @@ ul:has(.📍:hover) .📍:not(:hover){ /* Cards Grow When Footer Hovered  */
     padding: 1rem;
     padding-inline: 2rem;
     margin-block: 1rem;
-    margin-inline-end: 1.4rem;
+    margin-inline: .7rem;
     
     /* Style*/
     word-spacing: 100vw;
