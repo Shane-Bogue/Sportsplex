@@ -13,3 +13,19 @@ const eventsDaily = [
 document.querySelector('.Calendar .Day').textContent = today.toLocaleString('en-us', {weekday:'long'})
 document.querySelectorAll('.Calendar .Time div p').forEach((time, element) => {time.textContent = eventsDaily[today.getDay()][element][0]})
 document.querySelectorAll('.Calendar .Time div button span').forEach((time, element) => {time.textContent = eventsDaily[today.getDay()][element][1]})
+
+const modal = document.getElementById("myModal");
+const btns = document.querySelectorAll("#modalBtn");
+const  span = document.getElementsByClassName("close")[0];
+
+btns.forEach(btn => btn.addEventListener('click', () => modal.style.display = "block"))
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

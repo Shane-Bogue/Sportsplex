@@ -43,7 +43,7 @@
                     <a class="📍 📌" href="../Schedule/index.html">Schedule & Events</a>
                     <a class="📍" href=#Calendar"">Plan A Visit</a>
                     <a class="📍" href="#Contact">About</a>
-                    <a class="📍" href=#Calendar"">Contact</a>
+                    <a class="📍" id="modalBtn">Contact</a>
                     <a class="📍 Grit"><img src="../Images/menu-icon.svg" /></a>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                                 Your Local,
                             </p>
                             <p class="Hero">Skating Rink & Arcade</p>
-                            <button><span>Check Today's Events</span><p>→</p></button>
+                            <button><span>Plan A Visit</span><p>→</p></button>
                         </div>
                     </div>
                     <aside>
@@ -194,20 +194,24 @@
                     <div class="Hours">
                         <p class="Hero">Hours</p>
                         <p>Monday - Friday</p>
-                        <a class="Grit">4:15pm - 5pm <span>Open Stick</span></a><br>
-                        <a class="Grit">6pm - 11pm <span>League Play</span></a>
-                        <p>Saturday</p>
-                        <a class="Grit">9am - 11pm <span>Rental Available</span></a><br>
-                        <a class="Grit">12pm - 11pm <span>Special Events</span></a>
-                        <p>Sunday </p>
-                        <a class="Grit">8am - 8pm <span>League Play</span></a>
+                        <a class="Grit">8:30am - 12:00pm<span> Session 1</span></a><br>
+                        <a class="Grit">1:30pm - 5:00pm <span> Session 2</span></a><br>
+                        <a class="Grit">6:30pm - 10:00pm <span> Session 3</span></a>
+                        <p>Saturday & Sunday</p>
+                        <a class="Grit">8:30am - 12:00pm<span> Session 1</span></a><br>
+                        <a class="Grit">1:30pm - 5:00pm <span> Session 2</span></a><br>
+                        <a class="Grit">6:30pm - 11:00pm <span> Session 3</span></a>
                     </div>
                     <p class="Hero">Get in touch</p>
                     <p><a href="customerservices@parckway.com"><img src="../Images/mail.svg" /> info@peoriasportsplex.com</a></p>
                     <p><a href=”tel:623-878-2444”><img src="../Images/phone.svg" /> 623-878-2444</a></p>
-                </div>
+                    <form id="Form" name="MailingList" method="get" onsubmit=" this.reset(); return false">
+                            <input id="modalBtn" type="submit" value="Contact Us" data-wait="Please wait..." class="ContactButton">
+                        </form>
+
+                    </div>
+                </section>
             </section>
-        </section>
         <section class="⬜ MailingList">
             <section class="List">
                 <p class="Hero">See You Soon</p>
@@ -274,5 +278,41 @@
                     <p class="FooterTitle">Copyright © Skate•48 Peoria</p>
                 </div>
         </footer>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p>Contact Form</p>
+                    <span class="close">&times;</span>
+                    </div>
+                    <br>
+                    <div class="modal-body">
+                            <form id="Form" name="MailingList" method="get" onsubmit=" this.reset(); return false">
+                                <div class="Form">
+                                    <div>
+                                        <label for="name-2">Name</label>
+                                        <input type="text" class="text-field" maxlength="256" name="name-2" data-name="Name 2" placeholder="John Smith" id="name-2">
+                                    </div>
+                                    <div>
+                                        <label for="email-2">Email Address</label>
+                                        <input type="email" class="text-field" maxlength="256" name="email-2" data-name="Email 2" placeholder="john@gmail.com" id="email-2" required="">
+                                    </div>
+                                    <div>
+                                        <label for="subject-2">Subject</label>
+                                        <input type="text" class="text-field" maxlength="256" name="message" data-name="Email 2" placeholder="Subject" id="subject-2" required="">
+                                    </div>
+                                    <div>
+                                        <label for="message-2">Message</label>
+                                        <input type="text" class="text-field message" maxlength="256" name="message" data-name="Email 2" placeholder="Message" id="message-2" required="">
+                                    </div>
+                                    <input type="submit" value="Send Your Message" data-wait="Please wait..." class="FormButton">
+                                </form>
+                    </div>
+                    </div>
+                    <br>
+                    <div class="modal-footer">
+                    <p>Copyright © Skate•48 Peoria</p>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
