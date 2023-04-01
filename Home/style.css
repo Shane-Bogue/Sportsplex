@@ -77,14 +77,12 @@ header .header-social a img {
 }
 
 header .Wrapper {
-    width: 1200px;
     height: inherit;
     padding-inline: 2rem;
 
     justify-content: space-around;
     align-items: center;
 
-    margin-inline: auto;
 
 }
 
@@ -210,20 +208,17 @@ a {
     border-radius: .5rem;
 
     /* Style*/
-    background-color: #333;
-    color: white;
+    background-color: white;
+    color: #333;
     font-family: 'Fox', sans-serif;
     transition: .25s;
+    font-size: 1.1rem;
 }
 
-.📍:nth-child(5){
+.📍:nth-child(4){
     /* Format*/
     display: none;
     background-color: white;
-}
-
-.📍:nth-child(5) *{
-    /* Format*/
     width: 34px;
     height: 34px;
     position: relative;
@@ -950,6 +945,14 @@ footer > div {
         font-size: 12px;
     }
 
+    .header-social {
+        display: none;
+    }
+
+    header .header-contact-info {
+        width: 100%;
+    }
+
 }
 
 @media only screen and (max-width: 950px) {
@@ -963,14 +966,19 @@ footer > div {
         display: none;
     }
     .📍:nth-child(4){
-        display: none;
-    }
-    .📍:nth-child(5){
         display: block;
         margin: 0;
         padding: 0;
         padding-inline: 0;
         padding-block: 0;
+    }
+
+    .📍:nth-child(4) *{
+        background-color: white;
+        width: 34px;
+        height: 34px;
+        position: relative;
+        object-fit:contain;
     }
     .Calendar aside div {
         padding-inline: 0 !important;
@@ -1053,6 +1061,11 @@ footer > div {
 
     .MailingList .List{
         padding-inline: 1vw;
+    }
+
+    
+    header .header-contact-info {
+        font-size: 3vw;
     }
 }
 

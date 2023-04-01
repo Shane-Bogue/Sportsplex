@@ -30,6 +30,7 @@ body {
 
 }
 
+
 header {
     /* Format */
     position: sticky;
@@ -77,14 +78,12 @@ header .header-social a img {
 }
 
 header .Wrapper {
-    width: 1200px;
     height: inherit;
     padding-inline: 2rem;
 
     justify-content: space-around;
     align-items: center;
 
-    margin-inline: auto;
 
 }
 
@@ -201,20 +200,17 @@ a {
     border-radius: .5rem;
 
     /* Style*/
-    background-color: #333;
-    color: white;
+    background-color: white;
+    color: #333;
     font-family: 'Fox', sans-serif;
     transition: .25s;
+    font-size: 1.1rem;
 }
 
-.📍:nth-child(5){
+.📍:nth-child(4){
     /* Format*/
     display: none;
     background-color: white;
-}
-
-.📍:nth-child(5) *{
-    /* Format*/
     width: 34px;
     height: 34px;
     position: relative;
@@ -447,9 +443,6 @@ ul:has(.📍:hover) .📍:not(:hover){ /* Cards Grow When Footer Hovered  */
     font-family: 'Fox', sans-serif;
 }
 
-.Breaker + section {
-    background-color: #FAFAFA !important;
-}
 
 .Schedule {
     display: grid;
@@ -866,6 +859,17 @@ ul:has(.📍:hover) .📍:not(:hover){ /* Cards Grow When Footer Hovered  */
     height: 1rem;
 }
 
+.Location .ContactButton {
+    margin-top: 20px;
+    padding: 15px 25px;
+    border-radius: .25rem;
+    background-color: #df312c;
+    transition: .25s;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Fox', sans-serif;
+}
 
 .MailingList {
     background-color: white !important;
@@ -1157,6 +1161,14 @@ footer > div {
         font-size: 12px;
     }
 
+    .header-social {
+        display: none;
+    }
+
+    header .header-contact-info {
+        width: 100%;
+    }
+
 }
 
 @media only screen and (max-width: 950px) {
@@ -1170,14 +1182,19 @@ footer > div {
         display: none;
     }
     .📍:nth-child(4){
-        display: none;
-    }
-    .📍:nth-child(5){
         display: block;
         margin: 0;
         padding: 0;
         padding-inline: 0;
         padding-block: 0;
+    }
+
+    .📍:nth-child(4) *{
+        background-color: white;
+        width: 34px;
+        height: 34px;
+        position: relative;
+        object-fit:contain;
     }
     .Calendar aside div {
         padding-inline: 0 !important;
@@ -1261,4 +1278,135 @@ footer > div {
     .MailingList .List{
         padding-inline: 1vw;
     }
+
+    header .header-contact-info {
+        font-size: 3vw;
+    }
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 6; /* Sit on top */
+    padding-block: 150px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    font-family: 'Fox', sans-serif;
+  }
+
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  .close {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    transform: translateY(2px);
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #df312c;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: .75vw;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .modal-header p, .modal-footer p {
+    font-family: 'Fox', sans-serif !important;
+  }
+  
+  .modal-body {
+    padding-inline: 1vw;
+    text-align: center;
+}
+  
+  .modal-footer {
+    padding: 1vw;
+    font-size: .75rem;
+    text-align: center;
+    background-color: #333;
+    color: white;
+  }
+
+  .modal-body label {
+    position: relative;
+    bottom: -10px;
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 10px;
+    padding-right: 4px;
+    padding-left: 4px;
+    background-color: #fff;
+    font-weight: 700;
+}
+
+.modal-body .text-field {
+    height: 50px;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 100%;
+    padding-left: 1rem;
+}
+
+
+.modal-body .message {
+    height: 100px;
+}
+
+.modal-body aside div {
+    padding-inline: 0;
+}
+
+.modal-body .FormButton {
+    margin-top: 20px;
+    padding: 15px 25px;
+    border-radius: .25rem;
+    background-color: #df312c;
+    transition: .25s;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Fox', sans-serif;
+}
+
+.modal-body .FormButton:hover {
+    opacity: .9;
+    cursor: pointer;
 }
