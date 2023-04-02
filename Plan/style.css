@@ -176,11 +176,6 @@ a {
     display: flex;
 }
 
-.⚪ {  /* Logo */
-    /* Format*/
-
-    /* Style*/
-}
 
 .🧭 { /* Navigation */
     /* Format*/
@@ -230,18 +225,6 @@ ul:has(.📍:hover) .📍:not(:hover){ /* Cards Grow When Footer Hovered  */
     opacity: .9;
     transform: scale(1.05);
     cursor: pointer;
-}
-
-.📌 { /*  */
-    /* Format*/
-
-    /* Style*/
-}
-
-.🔻 {  /*  */
-    /* Format*/
-
-    /* Style*/
 }
 
 .🔳 {  /*  */
@@ -1411,6 +1394,18 @@ footer > div {
     cursor: pointer;
 }
 
+.Visit .FormButton {
+    margin-top: 20px;
+    padding: 15px 25px;
+    border-radius: .25rem;
+    background-color: #df312c;
+    transition: .25s;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Fox', sans-serif;
+}
+
 .Visit .Hero{
     font-size: 3rem;
     text-align: center;
@@ -1423,4 +1418,15 @@ footer > div {
 .Visit .title{
     padding-block: 2.5rem;
     text-align: center;
+    font-size: 1.5rem;
+    max-width: 50ch;
+    margin-inline: auto;
+}
+
+.Visit p:is(:not(.title,.Hero)) {
+    line-height: 2rem;
+    margin-inline: auto;
+    text-align: center;
+    max-width: 50ch;
+    padding-block: .5vh;
 }

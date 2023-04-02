@@ -1410,3 +1410,19 @@ footer > div {
     opacity: .9;
     cursor: pointer;
 }
+
+.Arcade {
+    background-image: url('../Images/arcade.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 150vh;
+    padding-inline: 2rem;
+    padding-block-start: 3rem;
+    padding-block-end: 6rem;
+    margin-inline: auto;
+    
+    /* Style*/
+    background-color: white;
+}
