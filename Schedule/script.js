@@ -9,7 +9,7 @@ function createDiv(names,content) {
 class Calendar {
 
     static selected = new Date()
-    static day =  this.selected.getDate();
+    static day = this.selected.getDate();
     static month = this.selected.getMonth()
     static year = this.selected.getFullYear()
 
@@ -29,6 +29,20 @@ class Calendar {
         [['Free Skate','8:30am - 12:00pm'],['Doubles Skate','1:30pm - 5pm'],['Funky Friday','6:30pm - 11:00pm']],
         [['Early Bird Skate','8:30am - 12:00pm'],['Free Skate','1:30pm - 5pm'],['Starry Saturday','6:30pm - 11:00pm']]
     ]
+
+    static eventDescriptions = {
+        'Early Bird Skate': 'Join Us Bright And Early For Free Rentals And Half Priced Entry.',
+        'Free Skate': 'General Skate Admission And Fees',
+        'Doubles Skate': 'Come With A Partner And Buy One Ticket And Get The Other Half Off',
+        'Photon Practice': 'Join Us For Our Practice Session (Beginner To Intermediate)',
+        'School Skate': 'Half Off Entery With Valid School ID',
+        'Soul Sunday': 'Sing Along To Gospel, Rhythm And Blues While We Take You Back To The 50\'s, 60\'s, And 70\'s Too!  ',
+        'Glow Skate': 'Neon! Neon! Neon! Glow Sticks FREE With Entry And Wear Your Brightest Lights And Colors!',
+        'Adult Night': 'Only Adults (18+). Join In On Fun Karokee, Dance Sessions, And Plenty Of Other Activites.',
+        'Nostalgia Night': 'It\'s Time To Listen To The Greatest Hits From Every Generation. This Will Be A Throwback For Everyone No Matter The Age.',
+        'Funky Friday': 'Get Your Funkiest Outfit On That Rink Because Tonight We All Are Having A Great Time.',
+        'Starry Saturday': 'Skate Under The Stars With An Atmospheric Rink Transformation. You Won\'t Forget It.',
+    }
 
     static selectDay(element) {
         UI.days.forEach(day => { 
@@ -82,6 +96,10 @@ class Calendar {
             Display.Update()
             isTime? Display.calendarEvent.append(createDiv(['time'],event)): Display.calendarEvents.append(createDiv(['event'],event))
         }))
+
+        document.querySelectorAll('.Arcade .Time div p').forEach((time, element) => {time.textContent = Calendar.eventsDaily[Calendar.selected.getDay()][element][0]})
+        document.querySelectorAll('.Arcade .Time div button span').forEach((time, element) => {time.textContent = Calendar.eventsDaily[Calendar.selected.getDay()][element][1]})
+        document.querySelectorAll('.Arcade .Time .desc').forEach((time, element) => {time.textContent = Calendar.eventDescriptions[Calendar.eventsDaily[Calendar.selected.getDay()][element][0]]})
     }
 
     static Generate(year,month) {
